@@ -1,13 +1,8 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import RootStack from './Screen/RootStack';
+import HealthScreen from './Screen/HealthScreen';
 
 function App() {
-  return (
-    <NavigationContainer>
-      <RootStack />
-    </NavigationContainer>
-  );
+  return <HealthScreen />;
 }
 
 export default App;

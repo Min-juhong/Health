@@ -15,7 +15,7 @@ function SplashScreen({navigation}) {
       setAnimating(false);
       //로컬 저장소에서 로그인 정보가 없다면 Auth로 이동함
       AsyncStorage.getItem('user_id').then(value =>
-        navigation.replace(value === null ? 'Auth' : 'MainTab'),
+        navigation.push(value === null ? 'Auth' : 'MainTab'),
       );
     }, 3000);
   }, []);
@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: 'white',
+    backgroundColor: 'blue',
   },
   activityIndicator: {
     alignItems: 'center',

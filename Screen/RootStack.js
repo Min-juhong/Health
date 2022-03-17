@@ -12,8 +12,7 @@ function Auth() {
         name="Login"
         component={LoginScreen}
         options={{
-          title: '',
-          headerBackTitleVisible: false,
+          headerShown: false,
         }}
       />
     </Stack.Navigator>

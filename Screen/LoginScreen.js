@@ -1,5 +1,12 @@
 import React, {useState, useRef} from 'react';
-import {TextInput, View, StyleSheet} from 'react-native';
+import {
+  TextInput,
+  View,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+} from 'react-native';
+import CustomButton from '../Components/CustomButton';
 
 function LoginScreen() {
   const [userId, setUserId] = useState('');
@@ -11,6 +18,7 @@ function LoginScreen() {
 
   return (
     <View style={styles.form}>
+      <Text style={styles.title}> 로그인 </Text>
       <TextInput
         style={styles.textinput}
         placeholder={'아이디를 입력하세요...'}
@@ -33,17 +41,36 @@ function LoginScreen() {
         underlineColorAndroid="#f000"
         blurOnSubmit={false}
       />
+      <CustomButton />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  textinput: {},
+  textinput: {
+    width: '100%',
+    height: '10%',
+    backgroundColor: 'white',
+  },
   form: {
-    marginTop: 64,
+    flex: 1,
     width: '100%',
     paddingHorizontal: 16,
+    backgroundColor: 'green',
   },
+  title: {
+    marginTop: 64,
+    fontSize: 32,
+    backgroundColor: 'red',
+  },
+  button: {
+    height: '30%',
+    backgroundColor: 'violet',
+    alignContent: 'center',
+    justifyContent: 'center',
+    borderRadius: 5,
+  },
+  text: {},
 });
 
 export default LoginScreen;
