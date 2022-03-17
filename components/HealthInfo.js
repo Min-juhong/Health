@@ -6,13 +6,9 @@ function HealthInfo(props) {
     <View style={[styles.container, props.style]}>
       <TouchableOpacity style={styles.button}>
         <View style={styles.rect}>
-          <Text style={styles.screenTime}>{props.title}</Text>
-          <View style={styles.group7}>
-            <View style={styles.rect5}>
-              <View style={styles.rect7}>
-                <View style={styles.rect6}></View>
-              </View>
-            </View>
+          <Text style={styles.text}>{props.title}</Text>
+          <View style={styles.group}>
+            <View style={styles.graph}></View>
           </View>
         </View>
       </TouchableOpacity>
@@ -23,7 +19,6 @@ function HealthInfo(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'green',
     width: '90%',
     borderRadius: 17,
   },
@@ -37,43 +32,31 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'rgba(0,0,0,1)',
     borderRadius: 17,
-    shadowColor: 'rgba(5,5,5,5)',
+    shadowColor: 'rgba(0,0,0,1)',
     shadowOffset: {
-      width: '1%',
-      height: '1%',
+      width: '10%',
+      height: '10%',
     },
-    elevation: 5,
-    shadowOpacity: 0.4,
-    shadowRadius: 0,
+    elevation: 10,
+    shadowOpacity: 1,
+    shadowRadius: 17,
   },
-  screenTime: {
+  text: {
     fontFamily: 'roboto-regular',
     color: 'rgba(255,255,255,1)',
-    marginTop: 11,
-    marginLeft: 16,
+    marginTop: '3%',
+    marginBottom: '2%',
+    marginLeft: '5%',
   },
-  group7: {
-    width: 285,
-    height: 20,
-    marginTop: 9,
-    marginLeft: 14,
+  group: {
+    marginTop: '2%',
+    marginLeft: '5%',
+    marginRight: '5%',
   },
-  rect5: {
-    width: 285,
-    height: 20,
-    backgroundColor: 'rgba(74,74,74,1)',
-    borderRadius: 12,
-  },
-  rect7: {
-    width: 252,
-    height: 20,
-    backgroundColor: 'rgba(0,59,128,1)',
-    borderRadius: 12,
-  },
-  rect6: {
-    width: 216,
-    height: 20,
-    backgroundColor: 'rgba(74,144,226,1)',
+  graph: {
+    width: '100%',
+    height: '50%',
+    backgroundColor: 'gray',
     borderRadius: 12,
   },
 });
